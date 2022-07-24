@@ -12,6 +12,7 @@
 		850FEFC7288D5F38003528C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC6288D5F38003528C9 /* Assets.xcassets */; };
 		850FEFCA288D5F38003528C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */; };
 		850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD6288D6396003528C9 /* ClientListView.swift */; };
+		850FEFD9288D6596003528C9 /* ClientListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD8288D6596003528C9 /* ClientListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		850FEFC9288D5F38003528C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850FEFCB288D5F38003528C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		850FEFD6288D6396003528C9 /* ClientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListView.swift; sourceTree = "<group>"; };
+		850FEFD8288D6596003528C9 /* ClientListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				850FEFD6288D6396003528C9 /* ClientListView.swift */,
+				850FEFD8288D6596003528C9 /* ClientListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
+				850FEFD9288D6596003528C9 /* ClientListCell.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
 				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
 			);

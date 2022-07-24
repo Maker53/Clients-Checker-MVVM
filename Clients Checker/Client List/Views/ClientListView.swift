@@ -18,7 +18,7 @@ class ClientListView: UIView {
         // TODO: привести в соответсвие с реальным размером ячеек
         tableView.estimatedRowHeight = 50
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        // TODO: зарегистрировать ячейку
+        tableView.register(ClientListCell.self, forCellReuseIdentifier: ClientListCell.identifier)
         
         return tableView
     }()
