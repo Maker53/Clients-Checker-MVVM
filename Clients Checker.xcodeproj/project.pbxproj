@@ -13,6 +13,9 @@
 		850FEFCA288D5F38003528C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */; };
 		850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD6288D6396003528C9 /* ClientListView.swift */; };
 		850FEFD9288D6596003528C9 /* ClientListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD8288D6596003528C9 /* ClientListCell.swift */; };
+		850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */; };
+		850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE2288D907C003528C9 /* ClientDetailsView.swift */; };
+		850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		850FEFCB288D5F38003528C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		850FEFD6288D6396003528C9 /* ClientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListView.swift; sourceTree = "<group>"; };
 		850FEFD8288D6596003528C9 /* ClientListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListCell.swift; sourceTree = "<group>"; };
+		850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewController.swift; sourceTree = "<group>"; };
+		850FEFE2288D907C003528C9 /* ClientDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsView.swift; sourceTree = "<group>"; };
+		850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInsets.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			children = (
 				850FEFD2288D607D003528C9 /* Application */,
 				850FEFD3288D609C003528C9 /* Client List */,
+				850FEFDD288D902A003528C9 /* ClientDetails */,
+				850FEFE4288DC52A003528C9 /* Extensions */,
 				850FEFD1288D601F003528C9 /* Supporting Files */,
 			);
 			path = "Clients Checker";
@@ -105,6 +113,39 @@
 				850FEFD8288D6596003528C9 /* ClientListCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		850FEFDD288D902A003528C9 /* ClientDetails */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFDF288D903C003528C9 /* View Controller */,
+				850FEFDE288D9038003528C9 /* Views */,
+			);
+			path = ClientDetails;
+			sourceTree = "<group>";
+		};
+		850FEFDE288D9038003528C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFE2288D907C003528C9 /* ClientDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		850FEFDF288D903C003528C9 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		850FEFE4288DC52A003528C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +220,11 @@
 			files = (
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
 				850FEFD9288D6596003528C9 /* ClientListCell.swift in Sources */,
+				850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
 				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
+				850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */,
+				850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
