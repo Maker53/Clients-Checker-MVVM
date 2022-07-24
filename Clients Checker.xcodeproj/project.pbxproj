@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFBD288D5F37003528C9 /* AppDelegate.swift */; };
-		850FEFC2288D5F37003528C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFC1288D5F37003528C9 /* ViewController.swift */; };
+		850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFC1288D5F37003528C9 /* ClientListViewController.swift */; };
 		850FEFC7288D5F38003528C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC6288D5F38003528C9 /* Assets.xcassets */; };
 		850FEFCA288D5F38003528C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		850FEFBA288D5F37003528C9 /* Clients Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clients Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850FEFBD288D5F37003528C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		850FEFC1288D5F37003528C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		850FEFC1288D5F37003528C9 /* ClientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewController.swift; sourceTree = "<group>"; };
 		850FEFC6288D5F38003528C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850FEFC9288D5F38003528C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850FEFCB288D5F38003528C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,13 +52,45 @@
 		850FEFBC288D5F37003528C9 /* Clients Checker */ = {
 			isa = PBXGroup;
 			children = (
-				850FEFBD288D5F37003528C9 /* AppDelegate.swift */,
-				850FEFC1288D5F37003528C9 /* ViewController.swift */,
-				850FEFC6288D5F38003528C9 /* Assets.xcassets */,
-				850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */,
-				850FEFCB288D5F38003528C9 /* Info.plist */,
+				850FEFD3288D609C003528C9 /* Client List */,
+				850FEFD2288D607D003528C9 /* Application */,
+				850FEFD1288D601F003528C9 /* Supporting Files */,
 			);
 			path = "Clients Checker";
+			sourceTree = "<group>";
+		};
+		850FEFD1288D601F003528C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFC6288D5F38003528C9 /* Assets.xcassets */,
+				850FEFCB288D5F38003528C9 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		850FEFD2288D607D003528C9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */,
+				850FEFBD288D5F37003528C9 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		850FEFD3288D609C003528C9 /* Client List */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFD4288D60AA003528C9 /* View Controller */,
+			);
+			path = "Client List";
+			sourceTree = "<group>";
+		};
+		850FEFD4288D60AA003528C9 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFC1288D5F37003528C9 /* ClientListViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850FEFC2288D5F37003528C9 /* ViewController.swift in Sources */,
+				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +305,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94XUBZ99A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Clients Checker/Info.plist";
+				INFOPLIST_FILE = "Clients Checker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -302,7 +334,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94XUBZ99A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Clients Checker/Info.plist";
+				INFOPLIST_FILE = "Clients Checker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
