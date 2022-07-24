@@ -11,6 +11,7 @@
 		850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFC1288D5F37003528C9 /* ClientListViewController.swift */; };
 		850FEFC7288D5F38003528C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC6288D5F38003528C9 /* Assets.xcassets */; };
 		850FEFCA288D5F38003528C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */; };
+		850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD6288D6396003528C9 /* ClientListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		850FEFC6288D5F38003528C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850FEFC9288D5F38003528C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850FEFCB288D5F38003528C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		850FEFD6288D6396003528C9 /* ClientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,8 @@
 		850FEFBC288D5F37003528C9 /* Clients Checker */ = {
 			isa = PBXGroup;
 			children = (
-				850FEFD3288D609C003528C9 /* Client List */,
 				850FEFD2288D607D003528C9 /* Application */,
+				850FEFD3288D609C003528C9 /* Client List */,
 				850FEFD1288D601F003528C9 /* Supporting Files */,
 			);
 			path = "Clients Checker";
@@ -80,6 +82,7 @@
 		850FEFD3288D609C003528C9 /* Client List */ = {
 			isa = PBXGroup;
 			children = (
+				850FEFD5288D6383003528C9 /* Views */,
 				850FEFD4288D60AA003528C9 /* View Controller */,
 			);
 			path = "Client List";
@@ -91,6 +94,14 @@
 				850FEFC1288D5F37003528C9 /* ClientListViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		850FEFD5288D6383003528C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFD6288D6396003528C9 /* ClientListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			files = (
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
+				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

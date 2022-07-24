@@ -8,12 +8,20 @@
 import UIKit
 
 class ClientListViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    // MARK: - Public Properties
+    
+    var mainView: ClientListView? {
+        view as? ClientListView
+    }
+    
+    // MARK: - Override Methods
+    
+    override func loadView() {
+        view = ClientListView()
     }
 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()        
+    }
 }
-
