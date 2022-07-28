@@ -53,6 +53,8 @@ extension ClientListViewController: ClientListViewDelegate {
         let clientDetailsViewController = ClientDetailsViewController()
         let navigationController = UINavigationController(rootViewController: clientDetailsViewController)
         
+        navigationController.modalPresentationStyle = .fullScreen
+        
         present(navigationController, animated: true)
     }
 }
