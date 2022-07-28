@@ -23,6 +23,24 @@ class ClientListView: UIView {
         return tableView
     }()
     
+    lazy var addNewCLientButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        button.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
+        button.tintColor = #colorLiteral(red: 0.3812560439, green: 0.3763138056, blue: 0.6871632934, alpha: 1)
+        button.contentVerticalAlignment = .fill
+        button.contentHorizontalAlignment = .fill
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.addTarget(self, action: #selector(addNewClientButtonPressed), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    // MARK: - Delegate
+    
+    weak var delegate: ClientListViewDelegate!
+    
     // MARK: - Initializers
     
     override init(frame: CGRect) {
@@ -43,14 +61,28 @@ extension ClientListView {
     
     private func addSubviews() {
         addSubview(tableView)
+        addSubview(addNewCLientButton)
     }
     
     private func setupConstraints() {
+        let guide = safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor)
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            
+            addNewCLientButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -20),
+            addNewCLientButton.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -20),
+            addNewCLientButton.widthAnchor.constraint(equalToConstant: 50),
+            addNewCLientButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+    // MARK: - Private Target-Actions
+    
+    @objc private func addNewClientButtonPressed() {
+        delegate.addNewClientButtonPressed()
     }
 }

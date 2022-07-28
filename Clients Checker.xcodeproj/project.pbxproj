@@ -16,6 +16,7 @@
 		850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */; };
 		850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE2288D907C003528C9 /* ClientDetailsView.swift */; };
 		850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */; };
+		856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewController.swift; sourceTree = "<group>"; };
 		850FEFE2288D907C003528C9 /* ClientDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsView.swift; sourceTree = "<group>"; };
 		850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInsets.swift"; sourceTree = "<group>"; };
+		856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				850FEFD6288D6396003528C9 /* ClientListView.swift */,
 				850FEFD8288D6596003528C9 /* ClientListCell.swift */,
+				856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */,
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
 				850FEFD9288D6596003528C9 /* ClientListCell.swift in Sources */,
 				850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */,
