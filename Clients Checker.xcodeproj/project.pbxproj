@@ -18,6 +18,7 @@
 		850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE2288D907C003528C9 /* ClientDetailsView.swift */; };
 		850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */; };
 		856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */; };
+		85683987289302C400BDC5E5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683986289302C400BDC5E5 /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		850FEFE2288D907C003528C9 /* ClientDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsView.swift; sourceTree = "<group>"; };
 		850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInsets.swift"; sourceTree = "<group>"; };
 		856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewDelegate.swift; sourceTree = "<group>"; };
+		85683986289302C400BDC5E5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,6 @@
 				672A7D974380A4A3AB273D18 /* Pods-Clients Checker.debug.xcconfig */,
 				5F8B1A75A8F350C1E736D11B /* Pods-Clients Checker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				850FEFD2288D607D003528C9 /* Application */,
+				85683985289302AF00BDC5E5 /* Model */,
 				850FEFD3288D609C003528C9 /* Client List */,
 				850FEFDD288D902A003528C9 /* ClientDetails */,
 				850FEFE4288DC52A003528C9 /* Extensions */,
@@ -166,6 +168,14 @@
 				850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		85683985289302AF00BDC5E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85683986289302C400BDC5E5 /* Client.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B0ACB2F7068CEDEEBDF58DFC /* Frameworks */ = {
@@ -298,6 +308,7 @@
 				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
 				850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */,
 				850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */,
+				85683987289302C400BDC5E5 /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
