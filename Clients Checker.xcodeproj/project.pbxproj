@@ -19,6 +19,8 @@
 		850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */; };
 		856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */; };
 		85683987289302C400BDC5E5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683986289302C400BDC5E5 /* Client.swift */; };
+		8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839892893030C00BDC5E5 /* IStorageManager.swift */; };
+		8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568398B2893035500BDC5E5 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInsets.swift"; sourceTree = "<group>"; };
 		856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewDelegate.swift; sourceTree = "<group>"; };
 		85683986289302C400BDC5E5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		856839892893030C00BDC5E5 /* IStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IStorageManager.swift; sourceTree = "<group>"; };
+		8568398B2893035500BDC5E5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,9 +177,19 @@
 		85683985289302AF00BDC5E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				85683988289302FA00BDC5E5 /* Services */,
 				85683986289302C400BDC5E5 /* Client.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		85683988289302FA00BDC5E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				856839892893030C00BDC5E5 /* IStorageManager.swift */,
+				8568398B2893035500BDC5E5 /* StorageManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B0ACB2F7068CEDEEBDF58DFC /* Frameworks */ = {
@@ -302,7 +316,9 @@
 			files = (
 				856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */,
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
+				8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */,
 				850FEFD9288D6596003528C9 /* ClientListCell.swift in Sources */,
+				8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */,
 				850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
 				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
