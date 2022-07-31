@@ -9,7 +9,9 @@ import RealmSwift
 
 protocol IStorageManager {
     
+    static var shared: IStorageManager { get }
+    
     func fetchObjects(_ type: Client.Type) -> Results<Client>
-//    func fetchObject(byIdentifier id: )
     func saveObject(_ object: Client)
+    func updateObject(_ object: Client)
 }
