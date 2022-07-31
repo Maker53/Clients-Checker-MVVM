@@ -24,7 +24,6 @@ class ClientCell: UITableViewCell {
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         
         return label
     }()
@@ -32,8 +31,8 @@ class ClientCell: UITableViewCell {
     private lazy var locationLabel: UILabel = {
         let label = UILabel()
         
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }()
@@ -55,20 +54,22 @@ class ClientCell: UITableViewCell {
         return imageView
     }()
     
-    private lazy var locationSymbolLabel: UILabel = {
-        let label = UILabel()
+    private lazy var locationSymbolImageView: UIImageView = {
+        let imageView = UIImageView()
+
+        imageView.image = UIImage(systemName: "mappin")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
+        return imageView
     }()
     
-    private lazy var timeSymbolLabel: UILabel = {
-        let label = UILabel()
+    private lazy var timeSymbolImageView: UIImageView = {
+        let imageView = UIImageView()
         
-        label.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(systemName: "clock")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        return label
+        return imageView
     }()
     
     private lazy var separatorView: UIView = {
@@ -115,8 +116,8 @@ extension ClientCell {
         addSubview(locationLabel)
         addSubview(timeLabel)
         addSubview(checkMarkImageView)
-        addSubview(locationSymbolLabel)
-        addSubview(timeSymbolLabel)
+        addSubview(locationSymbolImageView)
+        addSubview(timeSymbolImageView)
         addSubview(separatorView)
     }
     
@@ -125,31 +126,33 @@ extension ClientCell {
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15),
             
-            locationSymbolLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            locationSymbolLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
-            locationSymbolLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
+            locationSymbolImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            locationSymbolImageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
+            locationSymbolImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
             
-            locationLabel.leadingAnchor.constraint(equalTo: locationSymbolLabel.trailingAnchor, constant: 5),
-            locationLabel.topAnchor.constraint(equalTo: locationSymbolLabel.topAnchor),
-            locationLabel.bottomAnchor.constraint(equalTo: locationSymbolLabel.bottomAnchor),
+            locationLabel.leadingAnchor.constraint(equalTo: locationSymbolImageView.trailingAnchor, constant: 5),
+            locationLabel.topAnchor.constraint(equalTo: locationSymbolImageView.topAnchor),
+            locationLabel.bottomAnchor.constraint(equalTo: locationSymbolImageView.bottomAnchor),
             
             separatorView.leadingAnchor.constraint(equalTo: locationLabel.trailingAnchor, constant: 5),
-            separatorView.bottomAnchor.constraint(equalTo: locationSymbolLabel.bottomAnchor),
-            separatorView.topAnchor.constraint(equalTo: locationSymbolLabel.topAnchor),
+            separatorView.bottomAnchor.constraint(equalTo: locationSymbolImageView.bottomAnchor),
+            separatorView.topAnchor.constraint(equalTo: locationSymbolImageView.topAnchor),
             separatorView.widthAnchor.constraint(equalToConstant: 1.5),
             
-            timeSymbolLabel.leadingAnchor.constraint(equalTo: separatorView.trailingAnchor, constant: 5),
-            timeSymbolLabel.topAnchor.constraint(equalTo: locationSymbolLabel.topAnchor),
-            timeSymbolLabel.bottomAnchor.constraint(equalTo: locationSymbolLabel.bottomAnchor),
+            timeSymbolImageView.leadingAnchor.constraint(equalTo: separatorView.trailingAnchor, constant: 5),
+            timeSymbolImageView.topAnchor.constraint(equalTo: locationSymbolImageView.topAnchor),
+            timeSymbolImageView.bottomAnchor.constraint(equalTo: locationSymbolImageView.bottomAnchor),
             
-            timeLabel.leadingAnchor.constraint(equalTo: timeSymbolLabel.trailingAnchor, constant: 5),
-            timeLabel.topAnchor.constraint(equalTo: locationSymbolLabel.topAnchor),
-            timeLabel.bottomAnchor.constraint(equalTo: locationSymbolLabel.bottomAnchor),
+            timeLabel.leadingAnchor.constraint(equalTo: timeSymbolImageView.trailingAnchor, constant: 5),
+            timeLabel.topAnchor.constraint(equalTo: locationSymbolImageView.topAnchor),
+            timeLabel.bottomAnchor.constraint(equalTo: locationSymbolImageView.bottomAnchor),
             
             checkMarkImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             checkMarkImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             checkMarkImageView.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 20),
-            checkMarkImageView.leadingAnchor.constraint(equalTo: timeLabel.trailingAnchor, constant: 20)
+            checkMarkImageView.leadingAnchor.constraint(greaterThanOrEqualTo: timeLabel.trailingAnchor, constant: 20),
+            checkMarkImageView.heightAnchor.constraint(equalToConstant: 30),
+            checkMarkImageView.widthAnchor.constraint(equalToConstant: 30)
         ])
     }
 }
