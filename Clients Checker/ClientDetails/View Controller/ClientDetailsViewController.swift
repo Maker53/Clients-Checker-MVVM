@@ -9,7 +9,13 @@ import UIKit
 
 class ClientDetailsViewController: UIViewController {
     
+    // TODO: Не забыть удалить эту вспомогательную переменную
+    
+    var client: Client!
+    
     // MARK: - Public Properties
+    
+    var viewModel: IClientDetailsViewModel!
     var mainView: ClientDetailsView? {
         view as? ClientDetailsView
     }
@@ -22,6 +28,9 @@ class ClientDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // TODO: Временно инициализируем модель здесь, потом сделать при переходе
+        viewModel = ClientDetailsViewModel(client: client)
         
         setupNavigationBar()
     }
@@ -44,7 +53,7 @@ extension ClientDetailsViewController {
             action: #selector(saveBarButtonTapped)
         )
         
-        saveBarButton.isEnabled = false
+        saveBarButton.isEnabled = true
         
         navigationItem.leftBarButtonItem = cancelBarButton
         navigationItem.rightBarButtonItem = saveBarButton
@@ -57,6 +66,11 @@ extension ClientDetailsViewController {
     }
     
     @objc private func saveBarButtonTapped() {
+        viewModel.clientName = mainView?.nameTextField.text
+        viewModel.location = mainView?.locationTextField.text
+        viewModel.date = mainView?.datePicker.date
         
+        viewModel.saveClient()
+        dismiss(animated: true)
     }
 }
