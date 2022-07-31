@@ -44,12 +44,12 @@ final class ClientDetailsViewModel: IClientDetailsViewModel {
         // TODO: Вынести в отдельный сервис?
         
         if let client = currentClient {
-            client.clientName = clientName
-            client.location = location
-            client.visitDate = date
-            
             DispatchQueue.main.async {
-                StorageManager.shared.updateObject(client) {
+                StorageManager.shared.updateObject {
+                    client.clientName = clientName
+                    client.location = location
+                    client.visitDate = date
+                } completion: {
                     completion()
                 }
             }

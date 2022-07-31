@@ -29,10 +29,10 @@ class StorageManager: IStorageManager {
         }
     }
     
-    func updateObject(_ object: Client, completion: () -> Void) {
+    func updateObject(_ block: () -> Void, completion: (() -> Void)?) {
         try! realm.write {
-            realm.add(object, update: .modified)
-            completion()
+            block()
+            completion?()
         }
     }
 }

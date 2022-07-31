@@ -14,7 +14,6 @@ class ClientListView: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         
-        tableView.rowHeight = UITableView.automaticDimension
         // TODO: привести в соответсвие с реальным размером ячеек
         tableView.estimatedRowHeight = 50
         tableView.translatesAutoresizingMaskIntoConstraints = false

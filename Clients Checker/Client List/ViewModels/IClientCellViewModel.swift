@@ -14,6 +14,9 @@ protocol IClientCellViewModel {
     var location: String { get }
     var time: String { get }
     var isDone: Bool { get }
+    var viewModelDidChange: ((IClientCellViewModel) -> Void)? { get set }
     
     init(client: Client)
+    
+    func checkMarkPressed()
 }

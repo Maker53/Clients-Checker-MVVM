@@ -13,5 +13,5 @@ protocol IStorageManager {
     
     func fetchObjects(_ type: Client.Type, completion: (Results<Client>) -> Void)
     func saveObject(_ object: Client, completion: () -> Void)
-    func updateObject(_ object: Client, completion: () -> Void)
+    func updateObject(_ block: () -> Void, completion: (() -> Void)?)
 }

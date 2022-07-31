@@ -59,6 +59,7 @@ extension ClientListViewController: UITableViewDataSource {
         ) as? ClientCell else { return UITableViewCell() }
         
         cell.clientCellViewModel = clientListViewModel.getClientCellViewModel(at: indexPath)
+        cell.configure()
         
         return cell
     }

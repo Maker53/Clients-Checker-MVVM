@@ -30,8 +30,16 @@ class ClientCellViewModel: IClientCellViewModel {
     }
     
     var isDone: Bool {
-        client.isDone
+        get {
+            client.isDone
+        }
+        set {
+            StorageManager.shared.updateObject({ client.isDone = newValue }, completion: nil)
+            viewModelDidChange?(self)
+        }
     }
+    
+    var viewModelDidChange: ((IClientCellViewModel) -> Void)?
     
     // MARK: - Private Properties
     
@@ -48,5 +56,11 @@ class ClientCellViewModel: IClientCellViewModel {
     
     required init(client: Client) {
         self.client = client
+    }
+    
+    // MARK: - Public Methods
+    
+    func checkMarkPressed() {
+        isDone.toggle()
     }
 }

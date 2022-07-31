@@ -14,7 +14,9 @@ class ClientCell: UITableViewCell {
     static let identifier = String(describing: ClientCell.self)
     var clientCellViewModel: IClientCellViewModel! {
         didSet {
-            configure()
+            clientCellViewModel.viewModelDidChange = { [unowned self] viewModel in
+                self.setCheckMarkStatus(viewModel.isDone)
+            }
         }
     }
     
@@ -45,13 +47,16 @@ class ClientCell: UITableViewCell {
         return label
     }()
     
-    private lazy var checkMarkImageView: UIImageView = {
-        let imageView = UIImageView()
+    private lazy var checkMarkButton: UIButton = {
+        let button = UIButton(type: .system)
+        let image = UIImage(systemName: "checkmark.circle")
         
-        imageView.image = UIImage(systemName: "checkmark.circle")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(image, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
         
-        return imageView
+        button.addTarget(self, action: #selector(checkMarkPressed), for: .touchUpInside)
+        
+        return button
     }()
     
     private lazy var locationSymbolImageView: UIImageView = {
@@ -93,42 +98,48 @@ class ClientCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Public Methods
+    
+    func configure() {
+        nameLabel.text = clientCellViewModel.clientName
+        locationLabel.text = clientCellViewModel.location
+        timeLabel.text = clientCellViewModel.time
+        
+        setCheckMarkStatus(clientCellViewModel.isDone)
+    }
 }
 
 // MARK: - Private Methods
 
 extension ClientCell {
     
-    private func configure() {
-        nameLabel.text = clientCellViewModel.clientName
-        locationLabel.text = clientCellViewModel.location
-        timeLabel.text = clientCellViewModel.time
-        
-        if clientCellViewModel.isDone {
-            checkMarkImageView.tintColor = #colorLiteral(red: 0.3812560439, green: 0.3763138056, blue: 0.6871632934, alpha: 1)
+    private func setCheckMarkStatus(_ status: Bool) {
+        if status {
+            checkMarkButton.tintColor = #colorLiteral(red: 0.3812560439, green: 0.3763138056, blue: 0.6871632934, alpha: 1)
         } else {
-            checkMarkImageView.tintColor = #colorLiteral(red: 0.8784313725, green: 0.8825196028, blue: 0.9808915257, alpha: 0.500750207)
+            checkMarkButton.tintColor = #colorLiteral(red: 0.8784313725, green: 0.8825196028, blue: 0.9808915257, alpha: 0.500750207)
         }
     }
     
     private func addSubviews() {
-        addSubview(nameLabel)
-        addSubview(locationLabel)
-        addSubview(timeLabel)
-        addSubview(checkMarkImageView)
-        addSubview(locationSymbolImageView)
-        addSubview(timeSymbolImageView)
-        addSubview(separatorView)
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(locationLabel)
+        contentView.addSubview(timeLabel)
+        contentView.addSubview(checkMarkButton)
+        contentView.addSubview(locationSymbolImageView)
+        contentView.addSubview(timeSymbolImageView)
+        contentView.addSubview(separatorView)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
             
-            locationSymbolImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            locationSymbolImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             locationSymbolImageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
-            locationSymbolImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
+            locationSymbolImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
             
             locationLabel.leadingAnchor.constraint(equalTo: locationSymbolImageView.trailingAnchor, constant: 5),
             locationLabel.topAnchor.constraint(equalTo: locationSymbolImageView.topAnchor),
@@ -147,13 +158,19 @@ extension ClientCell {
             timeLabel.topAnchor.constraint(equalTo: locationSymbolImageView.topAnchor),
             timeLabel.bottomAnchor.constraint(equalTo: locationSymbolImageView.bottomAnchor),
             
-            checkMarkImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            checkMarkImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            checkMarkImageView.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 20),
-            checkMarkImageView.leadingAnchor.constraint(greaterThanOrEqualTo: timeLabel.trailingAnchor, constant: 20),
-            checkMarkImageView.heightAnchor.constraint(equalToConstant: 30),
-            checkMarkImageView.widthAnchor.constraint(equalToConstant: 30)
+            checkMarkButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            checkMarkButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            checkMarkButton.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 20),
+            checkMarkButton.leadingAnchor.constraint(greaterThanOrEqualTo: timeLabel.trailingAnchor, constant: 20),
+            checkMarkButton.heightAnchor.constraint(equalToConstant: 30),
+            checkMarkButton.widthAnchor.constraint(equalToConstant: 30)
         ])
+    }
+    
+    // MARK: - Target Actions
+    
+    @objc private func checkMarkPressed() {
+        clientCellViewModel.checkMarkPressed()
     }
 }
 
