@@ -9,13 +9,14 @@ import UIKit
 
 class ClientDetailsViewController: UIViewController {
     
-    // TODO: Не забыть удалить эту вспомогательную переменную
-    
-    var client: Client!
-    
     // MARK: - Public Properties
     
-    var viewModel: IClientDetailsViewModel!
+    weak var delegate: ClientDetailsViewControllerDelegate!
+    var viewModel: IClientDetailsViewModel! {
+        didSet {
+            title = viewModel.title
+        }
+    }
     var mainView: ClientDetailsView? {
         view as? ClientDetailsView
     }
@@ -28,9 +29,6 @@ class ClientDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // TODO: Временно инициализируем модель здесь, потом сделать при переходе
-        viewModel = ClientDetailsViewModel(client: client)
         
         setupNavigationBar()
     }
@@ -70,7 +68,10 @@ extension ClientDetailsViewController {
         viewModel.location = mainView?.locationTextField.text
         viewModel.date = mainView?.datePicker.date
         
-        viewModel.saveClient()
+        viewModel.saveClient { [weak self] in
+            self?.delegate.reloadData()
+        }
+        
         dismiss(animated: true)
     }
 }

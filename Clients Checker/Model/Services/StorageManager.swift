@@ -17,19 +17,22 @@ class StorageManager: IStorageManager {
     
     private init() {}
     
-    func fetchObjects(_ type: Client.Type) -> Results<Client> {
-        realm.objects(type)
+    func fetchObjects(_ type: Client.Type, completion: (Results<Client>) -> Void) {
+        let objects = realm.objects(type)
+        completion(objects)
     }
     
-    func saveObject(_ object: Client) {
+    func saveObject(_ object: Client, completion: () -> Void) {
         try! realm.write {
             realm.add(object)
+            completion()
         }
     }
     
-    func updateObject(_ object: Client) {
+    func updateObject(_ object: Client, completion: () -> Void) {
         try! realm.write {
             realm.add(object, update: .modified)
+            completion()
         }
     }
 }

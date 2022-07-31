@@ -1,5 +1,5 @@
 //
-//  ClientListCell.swift
+//  ClientCell.swift
 //  Clients Checker
 //
 //  Created by Станислав on 24.07.2022.
@@ -7,11 +7,16 @@
 
 import UIKit
 
-class ClientListCell: UITableViewCell {
+class ClientCell: UITableViewCell {
     
     // MARK: - Public Properties
     
-    static let identifier = String(describing: ClientListCell.self)
+    static let identifier = String(describing: ClientCell.self)
+    var clientCellViewModel: IClientCellViewModel! {
+        didSet {
+            configure()
+        }
+    }
     
     // MARK: - UI Private Properties
     
@@ -41,12 +46,13 @@ class ClientListCell: UITableViewCell {
         return label
     }()
     
-    private lazy var checkMarkLabel: UILabel = {
-        let label = UILabel()
+    private lazy var checkMarkImageView: UIImageView = {
+        let imageView = UIImageView()
         
-        label.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(systemName: "checkmark.circle")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        return label
+        return imageView
     }()
     
     private lazy var locationSymbolLabel: UILabel = {
@@ -67,6 +73,7 @@ class ClientListCell: UITableViewCell {
     
     private lazy var separatorView: UIView = {
         let view = UIView()
+        
         view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -89,13 +96,25 @@ class ClientListCell: UITableViewCell {
 
 // MARK: - Private Methods
 
-extension ClientListCell {
+extension ClientCell {
+    
+    private func configure() {
+        nameLabel.text = clientCellViewModel.clientName
+        locationLabel.text = clientCellViewModel.location
+        timeLabel.text = clientCellViewModel.time
+        
+        if clientCellViewModel.isDone {
+            checkMarkImageView.tintColor = #colorLiteral(red: 0.3812560439, green: 0.3763138056, blue: 0.6871632934, alpha: 1)
+        } else {
+            checkMarkImageView.tintColor = #colorLiteral(red: 0.8784313725, green: 0.8825196028, blue: 0.9808915257, alpha: 0.500750207)
+        }
+    }
     
     private func addSubviews() {
         addSubview(nameLabel)
         addSubview(locationLabel)
         addSubview(timeLabel)
-        addSubview(checkMarkLabel)
+        addSubview(checkMarkImageView)
         addSubview(locationSymbolLabel)
         addSubview(timeSymbolLabel)
         addSubview(separatorView)
@@ -127,10 +146,10 @@ extension ClientListCell {
             timeLabel.topAnchor.constraint(equalTo: locationSymbolLabel.topAnchor),
             timeLabel.bottomAnchor.constraint(equalTo: locationSymbolLabel.bottomAnchor),
             
-            checkMarkLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            checkMarkLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            checkMarkLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 20),
-            checkMarkLabel.leadingAnchor.constraint(equalTo: timeLabel.trailingAnchor, constant: 20)
+            checkMarkImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            checkMarkImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            checkMarkImageView.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 20),
+            checkMarkImageView.leadingAnchor.constraint(equalTo: timeLabel.trailingAnchor, constant: 20)
         ])
     }
 }

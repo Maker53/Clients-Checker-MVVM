@@ -18,12 +18,12 @@ class ClientListView: UIView {
         // TODO: привести в соответсвие с реальным размером ячеек
         tableView.estimatedRowHeight = 50
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(ClientListCell.self, forCellReuseIdentifier: ClientListCell.identifier)
+        tableView.register(ClientCell.self, forCellReuseIdentifier: ClientCell.identifier)
         
         return tableView
     }()
     
-    lazy var addNewCLientButton: UIButton = {
+    lazy var addNewClientButton: UIButton = {
         let button = UIButton(type: .system)
         
         button.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
@@ -61,7 +61,7 @@ extension ClientListView {
     
     private func addSubviews() {
         addSubview(tableView)
-        addSubview(addNewCLientButton)
+        addSubview(addNewClientButton)
     }
     
     private func setupConstraints() {
@@ -73,10 +73,10 @@ extension ClientListView {
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             
-            addNewCLientButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -20),
-            addNewCLientButton.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -20),
-            addNewCLientButton.widthAnchor.constraint(equalToConstant: 50),
-            addNewCLientButton.heightAnchor.constraint(equalToConstant: 50)
+            addNewClientButton.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -20),
+            addNewClientButton.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -20),
+            addNewClientButton.widthAnchor.constraint(equalToConstant: 50),
+            addNewClientButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

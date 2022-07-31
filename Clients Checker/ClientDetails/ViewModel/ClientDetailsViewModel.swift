@@ -34,7 +34,7 @@ final class ClientDetailsViewModel: IClientDetailsViewModel {
     
     // MARK: - Public Methods
     
-    func saveClient() {
+    func saveClient(completion: @escaping () -> Void) {
         guard
             let clientName = clientName,
             let location = location,
@@ -43,21 +43,23 @@ final class ClientDetailsViewModel: IClientDetailsViewModel {
         
         // TODO: Вынести в отдельный сервис?
         
-        let queue = DispatchQueue.global(qos: .userInitiated)
-        
         if let client = currentClient {
             client.clientName = clientName
             client.location = location
             client.visitDate = date
             
-            queue.async {
-                StorageManager.shared.updateObject(client)
+            DispatchQueue.main.async {
+                StorageManager.shared.updateObject(client) {
+                    completion()
+                }
             }
         } else {
             let newClient = Client(clientName: clientName, location: location, visitDate: date)
             
-            queue.async {
-                StorageManager.shared.saveObject(newClient)
+            DispatchQueue.main.async {
+                StorageManager.shared.saveObject(newClient) {
+                    completion()
+                }
             }
         }
     }

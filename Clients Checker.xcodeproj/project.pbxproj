@@ -13,7 +13,7 @@
 		850FEFC7288D5F38003528C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC6288D5F38003528C9 /* Assets.xcassets */; };
 		850FEFCA288D5F38003528C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */; };
 		850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD6288D6396003528C9 /* ClientListView.swift */; };
-		850FEFD9288D6596003528C9 /* ClientListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD8288D6596003528C9 /* ClientListCell.swift */; };
+		850FEFD9288D6596003528C9 /* ClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD8288D6596003528C9 /* ClientCell.swift */; };
 		850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */; };
 		850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE2288D907C003528C9 /* ClientDetailsView.swift */; };
 		850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */; };
@@ -23,6 +23,11 @@
 		8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568398B2893035500BDC5E5 /* StorageManager.swift */; };
 		8568398F2895609C00BDC5E5 /* ClientDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568398E2895609C00BDC5E5 /* ClientDetailsViewModel.swift */; };
 		85683991289560AF00BDC5E5 /* IClientDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683990289560AF00BDC5E5 /* IClientDetailsViewModel.swift */; };
+		85683994289682EE00BDC5E5 /* IClientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683993289682EE00BDC5E5 /* IClientListViewModel.swift */; };
+		856839962896833700BDC5E5 /* ClientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839952896833700BDC5E5 /* ClientListViewModel.swift */; };
+		856839982896894300BDC5E5 /* IClientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839972896894300BDC5E5 /* IClientCellViewModel.swift */; };
+		8568399A28968A7800BDC5E5 /* ClientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */; };
+		8568399C2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +41,7 @@
 		850FEFC9288D5F38003528C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850FEFCB288D5F38003528C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		850FEFD6288D6396003528C9 /* ClientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListView.swift; sourceTree = "<group>"; };
-		850FEFD8288D6596003528C9 /* ClientListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListCell.swift; sourceTree = "<group>"; };
+		850FEFD8288D6596003528C9 /* ClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCell.swift; sourceTree = "<group>"; };
 		850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewController.swift; sourceTree = "<group>"; };
 		850FEFE2288D907C003528C9 /* ClientDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsView.swift; sourceTree = "<group>"; };
 		850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInsets.swift"; sourceTree = "<group>"; };
@@ -46,6 +51,11 @@
 		8568398B2893035500BDC5E5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		8568398E2895609C00BDC5E5 /* ClientDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewModel.swift; sourceTree = "<group>"; };
 		85683990289560AF00BDC5E5 /* IClientDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClientDetailsViewModel.swift; sourceTree = "<group>"; };
+		85683993289682EE00BDC5E5 /* IClientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClientListViewModel.swift; sourceTree = "<group>"; };
+		856839952896833700BDC5E5 /* ClientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewModel.swift; sourceTree = "<group>"; };
+		856839972896894300BDC5E5 /* IClientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClientCellViewModel.swift; sourceTree = "<group>"; };
+		8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCellViewModel.swift; sourceTree = "<group>"; };
+		8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,7 @@
 		850FEFD3288D609C003528C9 /* Client List */ = {
 			isa = PBXGroup;
 			children = (
+				85683992289682D300BDC5E5 /* ViewModels */,
 				850FEFD5288D6383003528C9 /* Views */,
 				850FEFD4288D60AA003528C9 /* View Controller */,
 			);
@@ -139,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				850FEFD6288D6396003528C9 /* ClientListView.swift */,
-				850FEFD8288D6596003528C9 /* ClientListCell.swift */,
+				850FEFD8288D6596003528C9 /* ClientCell.swift */,
 				856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */,
 			);
 			path = Views;
@@ -167,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */,
+				8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -204,6 +216,17 @@
 				85683990289560AF00BDC5E5 /* IClientDetailsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		85683992289682D300BDC5E5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				85683993289682EE00BDC5E5 /* IClientListViewModel.swift */,
+				856839952896833700BDC5E5 /* ClientListViewModel.swift */,
+				856839972896894300BDC5E5 /* IClientCellViewModel.swift */,
+				8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		B0ACB2F7068CEDEEBDF58DFC /* Frameworks */ = {
@@ -331,12 +354,17 @@
 				856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */,
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
 				8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */,
-				850FEFD9288D6596003528C9 /* ClientListCell.swift in Sources */,
+				850FEFD9288D6596003528C9 /* ClientCell.swift in Sources */,
 				8568398F2895609C00BDC5E5 /* ClientDetailsViewModel.swift in Sources */,
+				8568399C2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift in Sources */,
+				85683994289682EE00BDC5E5 /* IClientListViewModel.swift in Sources */,
 				8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */,
+				8568399A28968A7800BDC5E5 /* ClientCellViewModel.swift in Sources */,
 				850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
+				856839982896894300BDC5E5 /* IClientCellViewModel.swift in Sources */,
 				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
+				856839962896833700BDC5E5 /* ClientListViewModel.swift in Sources */,
 				850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */,
 				850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */,
 				85683991289560AF00BDC5E5 /* IClientDetailsViewModel.swift in Sources */,

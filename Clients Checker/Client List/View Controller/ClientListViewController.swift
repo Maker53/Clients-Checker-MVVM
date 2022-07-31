@@ -15,6 +15,16 @@ class ClientListViewController: UIViewController {
         view as? ClientListView
     }
     
+    // MARK: - Private Properties
+    
+    private var clientListViewModel: IClientListViewModel! {
+        didSet {
+            clientListViewModel.fetchClients { [unowned self] in
+                self.mainView?.tableView.reloadData()
+            }
+        }
+    }
+    
     // MARK: - Override Methods
     
     override func loadView() {
@@ -25,23 +35,46 @@ class ClientListViewController: UIViewController {
         super.viewDidLoad()
         
         mainView?.tableView.dataSource = self
+        mainView?.tableView.delegate = self
         mainView?.delegate = self
+        
+        clientListViewModel = ClientListViewModel()
     }
 }
 
 extension ClientListViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        clientListViewModel.numberOfSections()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        clientListViewModel.numberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: ClientListCell.identifier,
+            withIdentifier: ClientCell.identifier,
             for: indexPath
-        ) as? ClientListCell else { return UITableViewCell() }
+        ) as? ClientCell else { return UITableViewCell() }
+        
+        cell.clientCellViewModel = clientListViewModel.getClientCellViewModel(at: indexPath)
         
         return cell
+    }
+}
+
+extension ClientListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let clientDetailsViewModel = clientListViewModel.getClientDetailsViewModel(at: indexPath)
+        let navigationController = clientListViewModel.getClientDetailsNavigationController(
+            withDelegate: self,
+            andViewModel: clientDetailsViewModel)
+        
+        present(navigationController, animated: true)
     }
 }
 
@@ -50,11 +83,18 @@ extension ClientListViewController: UITableViewDataSource {
 extension ClientListViewController: ClientListViewDelegate {
     
     func addNewClientButtonPressed() {
-        let clientDetailsViewController = ClientDetailsViewController()
-        let navigationController = UINavigationController(rootViewController: clientDetailsViewController)
-        
-        navigationController.modalPresentationStyle = .fullScreen
+        let clientDetailsViewModel = clientListViewModel.getClientDetailsViewModel(at: nil)
+        let navigationController = clientListViewModel.getClientDetailsNavigationController(
+            withDelegate: self,
+            andViewModel: clientDetailsViewModel)
         
         present(navigationController, animated: true)
+    }
+}
+
+extension ClientListViewController: ClientDetailsViewControllerDelegate {
+    
+    func reloadData() {
+        mainView?.tableView.reloadData()
     }
 }

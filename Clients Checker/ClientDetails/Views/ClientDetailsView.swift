@@ -42,7 +42,7 @@ class ClientDetailsView: UIView {
         textField.layer.cornerRadius = 15
         textField.layer.borderWidth = 1
         textField.layer.borderColor = #colorLiteral(red: 0.3812560439, green: 0.3763138056, blue: 0.6871632934, alpha: 1)
-        textField.backgroundColor = #colorLiteral(red: 0.877543211, green: 0.8825196028, blue: 0.9808915257, alpha: 0.5)
+        textField.backgroundColor = #colorLiteral(red: 0.8784313725, green: 0.8825196028, blue: 0.9808915257, alpha: 0.75)
         textField.attributedPlaceholder = NSAttributedString(
             string: "Введите место приема",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])

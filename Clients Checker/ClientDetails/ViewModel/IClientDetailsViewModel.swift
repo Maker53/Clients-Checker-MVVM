@@ -16,5 +16,5 @@ protocol IClientDetailsViewModel {
     
     init(client: Client?)
     
-    func saveClient()
+    func saveClient(completion: @escaping () -> Void)
 }
