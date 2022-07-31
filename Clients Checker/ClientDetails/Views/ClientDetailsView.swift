@@ -9,18 +9,9 @@ import UIKit
 
 class ClientDetailsView: UIView {
     
-    // MARK: - UI Private Properties
-    private lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        
-        label.text = "Имя"
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    // MARK: - Public UI Properties
     
-    private lazy var nameTextField: UITextField = {
+    lazy var nameTextField: UITextField = {
         let textField = UITextField()
         
         textField.autocapitalizationType = .words
@@ -41,17 +32,7 @@ class ClientDetailsView: UIView {
         return textField
     }()
     
-    private lazy var locationLabel: UILabel = {
-        let label = UILabel()
-        
-        label.text = "Место приема"
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
-    
-    private lazy var locationTextField: UITextField = {
+    lazy var locationTextField: UITextField = {
         let textField = UITextField()
         
         textField.autocorrectionType = .no
@@ -71,17 +52,7 @@ class ClientDetailsView: UIView {
         return textField
     }()
     
-    private lazy var dateLabel: UILabel = {
-        let label = UILabel()
-        
-        label.text = "Дата"
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
-    
-    private lazy var datePicker: UIDatePicker = {
+    lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         
         datePicker.locale = Locale(identifier: "Ru_ru")
@@ -91,6 +62,38 @@ class ClientDetailsView: UIView {
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         
         return datePicker
+    }()
+    
+    // MARK: - Private UI Properties
+    
+    private lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "Имя"
+        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
+    
+    private lazy var locationLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "Место приема"
+        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
+    
+    private lazy var dateLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "Дата"
+        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
     }()
     
     // MARK: - Initializers
