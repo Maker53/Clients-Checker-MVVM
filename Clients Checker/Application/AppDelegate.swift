@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let clientListViewController = ClientListViewController()
         let navigationController = UINavigationController(rootViewController: clientListViewController)
         
+        navigationController.navigationBar.prefersLargeTitles = true
+        clientListViewController.title = "Список клиентов"
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
