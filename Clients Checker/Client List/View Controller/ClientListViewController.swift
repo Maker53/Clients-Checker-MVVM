@@ -93,7 +93,7 @@ extension ClientListViewController: ClientListViewDelegate {
     }
 }
 
-extension ClientListViewController: ClientDetailsViewControllerDelegate {
+extension ClientListViewController: ClientLDetailsViewControllerDelegate {
     
     func reloadData() {
         mainView?.tableView.reloadData()

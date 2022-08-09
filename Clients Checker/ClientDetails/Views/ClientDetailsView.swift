@@ -28,6 +28,7 @@ class ClientDetailsView: UIView {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         
         textField.setLeftPadding(15)
+        textField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
         return textField
     }()
@@ -48,6 +49,7 @@ class ClientDetailsView: UIView {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         
         textField.setLeftPadding(15)
+        textField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
         return textField
     }()
@@ -63,6 +65,28 @@ class ClientDetailsView: UIView {
         
         return datePicker
     }()
+    
+    lazy var cancelBarButton = UIBarButtonItem(
+        barButtonSystemItem: .cancel,
+        target: self,
+        action: #selector(cancelBarButtonTapped)
+    )
+    
+    lazy var saveBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(
+            barButtonSystemItem: .save,
+            target: self,
+            action: #selector(saveBarButtonTapped)
+        )
+        
+        button.isEnabled = false
+        
+        return button
+    }()
+    
+    // MARK: - Public Properties
+    
+    weak var delegate: ClientDetailsViewDelegate!
     
     // MARK: - Private UI Properties
     
@@ -152,5 +176,19 @@ extension ClientDetailsView {
             datePicker.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 10),
             datePicker.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -10)
         ])
+    }
+    
+    // MARK: - Target Actions
+    
+    @objc private func cancelBarButtonTapped() {
+        delegate.cancelBarButtonTapped()
+    }
+    
+    @objc private func saveBarButtonTapped() {
+        delegate.saveBarButtonTapped()
+    }
+    
+    @objc private func textFieldChanged() {
+        delegate.textFieldChanged()
     }
 }

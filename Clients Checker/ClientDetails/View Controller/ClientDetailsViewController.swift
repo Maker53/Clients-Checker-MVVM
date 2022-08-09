@@ -11,7 +11,7 @@ class ClientDetailsViewController: UIViewController {
     
     // MARK: - Public Properties
     
-    weak var delegate: ClientDetailsViewControllerDelegate!
+    weak var delegate: ClientLDetailsViewControllerDelegate!
     var viewModel: IClientDetailsViewModel! {
         didSet {
             title = viewModel.title
@@ -30,7 +30,15 @@ class ClientDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainView?.delegate = self
+        
         setupNavigationBar()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        view.endEditing(true)
     }
 }
 
@@ -39,31 +47,22 @@ class ClientDetailsViewController: UIViewController {
 extension ClientDetailsViewController {
     
     private func setupNavigationBar() {
-        let cancelBarButton = UIBarButtonItem(
-            barButtonSystemItem: .cancel,
-            target: self,
-            action: #selector(cancelBarButtonTapped)
-        )
+        let saveBarButton = mainView?.saveBarButton
         
-        let saveBarButton = UIBarButtonItem(
-            barButtonSystemItem: .save,
-            target: self,
-            action: #selector(saveBarButtonTapped)
-        )
-        
-        saveBarButton.isEnabled = true
-        
-        navigationItem.leftBarButtonItem = cancelBarButton
+        navigationItem.leftBarButtonItem = mainView?.cancelBarButton
         navigationItem.rightBarButtonItem = saveBarButton
     }
+}
+
+// MARK: - ClientDetailsViewDelegate
+
+extension ClientDetailsViewController: ClientDetailsViewDelegate {
     
-    // MARK: - Private Target-Actions
-    
-    @objc private func cancelBarButtonTapped() {
+    @objc func cancelBarButtonTapped() {
         dismiss(animated: true)
     }
     
-    @objc private func saveBarButtonTapped() {
+    @objc func saveBarButtonTapped() {
         viewModel.clientName = mainView?.nameTextField.text
         viewModel.location = mainView?.locationTextField.text
         viewModel.date = mainView?.datePicker.date
@@ -73,5 +72,18 @@ extension ClientDetailsViewController {
         }
         
         dismiss(animated: true)
+    }
+    
+    @objc func textFieldChanged() {
+        guard
+            let nameText = mainView?.nameTextField.text,
+            let locationText = mainView?.locationTextField.text
+        else { return }
+        
+        if nameText.isEmpty || locationText.isEmpty {
+            mainView?.saveBarButton.isEnabled = false
+        } else {
+            mainView?.saveBarButton.isEnabled = true
+        }
     }
 }

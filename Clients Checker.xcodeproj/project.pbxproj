@@ -27,7 +27,8 @@
 		856839962896833700BDC5E5 /* ClientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839952896833700BDC5E5 /* ClientListViewModel.swift */; };
 		856839982896894300BDC5E5 /* IClientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839972896894300BDC5E5 /* IClientCellViewModel.swift */; };
 		8568399A28968A7800BDC5E5 /* ClientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */; };
-		8568399C2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */; };
+		8568399C2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399B2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift */; };
+		8568399E2897918600BDC5E5 /* ClientDetailsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399D2897918600BDC5E5 /* ClientDetailsViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +56,8 @@
 		856839952896833700BDC5E5 /* ClientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewModel.swift; sourceTree = "<group>"; };
 		856839972896894300BDC5E5 /* IClientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClientCellViewModel.swift; sourceTree = "<group>"; };
 		8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCellViewModel.swift; sourceTree = "<group>"; };
-		8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		8568399B2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLDetailsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		8568399D2897918600BDC5E5 /* ClientDetailsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		850FEFDE288D9038003528C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8568399D2897918600BDC5E5 /* ClientDetailsViewDelegate.swift */,
 				850FEFE2288D907C003528C9 /* ClientDetailsView.swift */,
 			);
 			path = Views;
@@ -177,8 +180,8 @@
 		850FEFDF288D903C003528C9 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8568399B2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift */,
 				850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */,
-				8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -356,11 +359,12 @@
 				8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */,
 				850FEFD9288D6596003528C9 /* ClientCell.swift in Sources */,
 				8568398F2895609C00BDC5E5 /* ClientDetailsViewModel.swift in Sources */,
-				8568399C2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift in Sources */,
+				8568399C2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift in Sources */,
 				85683994289682EE00BDC5E5 /* IClientListViewModel.swift in Sources */,
 				8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */,
 				8568399A28968A7800BDC5E5 /* ClientCellViewModel.swift in Sources */,
 				850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */,
+				8568399E2897918600BDC5E5 /* ClientDetailsViewDelegate.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
 				856839982896894300BDC5E5 /* IClientCellViewModel.swift in Sources */,
 				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
