@@ -29,17 +29,7 @@ class ClientCellViewModel: IClientCellViewModel {
         return time
     }
     
-    var isDone: Bool {
-        get {
-            client.isDone
-        }
-        set {
-            StorageManager.shared.updateObject({ client.isDone = newValue }, completion: nil)
-            viewModelDidChange?(self)
-        }
-    }
-    
-    var viewModelDidChange: ((IClientCellViewModel) -> Void)?
+    var isDone: Box<Bool>
     
     // MARK: - Private Properties
     
@@ -56,11 +46,13 @@ class ClientCellViewModel: IClientCellViewModel {
     
     required init(client: Client) {
         self.client = client
+        isDone = Box(client.isDone)
     }
     
     // MARK: - Public Methods
     
     func checkMarkPressed() {
-        isDone.toggle()
+        isDone.value.toggle()
+        StorageManager.shared.updateObject({ client.isDone = isDone.value }, completion: nil)
     }
 }

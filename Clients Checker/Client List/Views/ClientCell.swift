@@ -12,13 +12,7 @@ class ClientCell: UITableViewCell {
     // MARK: - Public Properties
     
     static let identifier = String(describing: ClientCell.self)
-    var clientCellViewModel: IClientCellViewModel! {
-        didSet {
-            clientCellViewModel.viewModelDidChange = { [unowned self] viewModel in
-                self.setCheckMarkStatus(viewModel.isDone)
-            }
-        }
-    }
+    var clientCellViewModel: IClientCellViewModel!
     
     // MARK: - UI Private Properties
     
@@ -106,7 +100,9 @@ class ClientCell: UITableViewCell {
         locationLabel.text = clientCellViewModel.location
         timeLabel.text = clientCellViewModel.time
         
-        setCheckMarkStatus(clientCellViewModel.isDone)
+        clientCellViewModel.isDone.bind { [weak self] value in
+            self?.setCheckMarkStatus(value)
+        }
     }
 }
 

@@ -13,8 +13,7 @@ protocol IClientCellViewModel {
     var clientName: String { get }
     var location: String { get }
     var time: String { get }
-    var isDone: Bool { get }
-    var viewModelDidChange: ((IClientCellViewModel) -> Void)? { get set }
+    var isDone: Box<Bool> { get }
     
     init(client: Client)
     

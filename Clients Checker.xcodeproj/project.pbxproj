@@ -17,6 +17,7 @@
 		850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */; };
 		850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE2288D907C003528C9 /* ClientDetailsView.swift */; };
 		850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */; };
+		855DDBBA28A4C08B008B54D7 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DDBB928A4C08B008B54D7 /* Box.swift */; };
 		856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */; };
 		85683987289302C400BDC5E5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683986289302C400BDC5E5 /* Client.swift */; };
 		8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839892893030C00BDC5E5 /* IStorageManager.swift */; };
@@ -46,6 +47,7 @@
 		850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewController.swift; sourceTree = "<group>"; };
 		850FEFE2288D907C003528C9 /* ClientDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsView.swift; sourceTree = "<group>"; };
 		850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInsets.swift"; sourceTree = "<group>"; };
+		855DDBB928A4C08B008B54D7 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewDelegate.swift; sourceTree = "<group>"; };
 		85683986289302C400BDC5E5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		856839892893030C00BDC5E5 /* IStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IStorageManager.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		850FEFBC288D5F37003528C9 /* Clients Checker */ = {
 			isa = PBXGroup;
 			children = (
+				855DDBB828A4C078008B54D7 /* Helpers */,
 				850FEFD2288D607D003528C9 /* Application */,
 				85683985289302AF00BDC5E5 /* Model */,
 				850FEFD3288D609C003528C9 /* Client List */,
@@ -192,6 +195,14 @@
 				850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		855DDBB828A4C078008B54D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				855DDBB928A4C08B008B54D7 /* Box.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		85683985289302AF00BDC5E5 /* Model */ = {
@@ -357,6 +368,7 @@
 				856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */,
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
 				8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */,
+				855DDBBA28A4C08B008B54D7 /* Box.swift in Sources */,
 				850FEFD9288D6596003528C9 /* ClientCell.swift in Sources */,
 				8568398F2895609C00BDC5E5 /* ClientDetailsViewModel.swift in Sources */,
 				8568399C2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift in Sources */,
