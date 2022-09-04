@@ -12,8 +12,8 @@ class Client: Object, ObjectKeyIdentifiable {
     @Persisted var clientName: String
     @Persisted var location: String
     @Persisted var visitDate: Date
-    @Persisted var isDone = false
     @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var isDone = false
     
     convenience init(clientName: String, location: String, visitDate: Date) {
         self.init()

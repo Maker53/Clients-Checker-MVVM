@@ -29,10 +29,9 @@ class StorageManager: IStorageManager {
         }
     }
     
-    func updateObject(_ block: () -> Void, completion: (() -> Void)?) {
+    func updateObject(_ block: () -> Void) {
         try! realm.write {
             block()
-            completion?()
         }
     }
 }

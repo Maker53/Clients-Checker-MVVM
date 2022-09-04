@@ -49,7 +49,7 @@ final class ClientDetailsViewModel: IClientDetailsViewModel {
                     client.clientName = clientName
                     client.location = location
                     client.visitDate = date
-                } completion: {
+                    
                     completion()
                 }
             }

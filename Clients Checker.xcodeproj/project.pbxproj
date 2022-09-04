@@ -18,7 +18,8 @@
 		850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE2288D907C003528C9 /* ClientDetailsView.swift */; };
 		850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */; };
 		855DDBBA28A4C08B008B54D7 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DDBB928A4C08B008B54D7 /* Box.swift */; };
-		856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */; };
+		855DDBBC28A60704008B54D7 /* ClientListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DDBBB28A60704008B54D7 /* ClientListTableViewDataSource.swift */; };
+		855DDBBE28A60999008B54D7 /* ClientListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DDBBD28A60999008B54D7 /* ClientListTableViewDelegate.swift */; };
 		85683987289302C400BDC5E5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683986289302C400BDC5E5 /* Client.swift */; };
 		8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839892893030C00BDC5E5 /* IStorageManager.swift */; };
 		8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568398B2893035500BDC5E5 /* StorageManager.swift */; };
@@ -28,8 +29,10 @@
 		856839962896833700BDC5E5 /* ClientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839952896833700BDC5E5 /* ClientListViewModel.swift */; };
 		856839982896894300BDC5E5 /* IClientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839972896894300BDC5E5 /* IClientCellViewModel.swift */; };
 		8568399A28968A7800BDC5E5 /* ClientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */; };
-		8568399C2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399B2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift */; };
+		8568399C2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */; };
 		8568399E2897918600BDC5E5 /* ClientDetailsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399D2897918600BDC5E5 /* ClientDetailsViewDelegate.swift */; };
+		85B99C8828C4BE8E00A95E25 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B99C8728C4BE8E00A95E25 /* Coordinator.swift */; };
+		85B99C8A28C4BEDE00A95E25 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B99C8928C4BEDE00A95E25 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +51,8 @@
 		850FEFE2288D907C003528C9 /* ClientDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsView.swift; sourceTree = "<group>"; };
 		850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInsets.swift"; sourceTree = "<group>"; };
 		855DDBB928A4C08B008B54D7 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewDelegate.swift; sourceTree = "<group>"; };
+		855DDBBB28A60704008B54D7 /* ClientListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListTableViewDataSource.swift; sourceTree = "<group>"; };
+		855DDBBD28A60999008B54D7 /* ClientListTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListTableViewDelegate.swift; sourceTree = "<group>"; };
 		85683986289302C400BDC5E5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		856839892893030C00BDC5E5 /* IStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IStorageManager.swift; sourceTree = "<group>"; };
 		8568398B2893035500BDC5E5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -58,8 +62,10 @@
 		856839952896833700BDC5E5 /* ClientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewModel.swift; sourceTree = "<group>"; };
 		856839972896894300BDC5E5 /* IClientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClientCellViewModel.swift; sourceTree = "<group>"; };
 		8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCellViewModel.swift; sourceTree = "<group>"; };
-		8568399B2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLDetailsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewControllerDelegate.swift; sourceTree = "<group>"; };
 		8568399D2897918600BDC5E5 /* ClientDetailsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewDelegate.swift; sourceTree = "<group>"; };
+		85B99C8728C4BE8E00A95E25 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		85B99C8928C4BEDE00A95E25 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +110,10 @@
 		850FEFBC288D5F37003528C9 /* Clients Checker */ = {
 			isa = PBXGroup;
 			children = (
-				855DDBB828A4C078008B54D7 /* Helpers */,
 				850FEFD2288D607D003528C9 /* Application */,
 				85683985289302AF00BDC5E5 /* Model */,
 				850FEFD3288D609C003528C9 /* Client List */,
 				850FEFDD288D902A003528C9 /* ClientDetails */,
-				850FEFE4288DC52A003528C9 /* Extensions */,
-				850FEFD1288D601F003528C9 /* Supporting Files */,
 			);
 			path = "Clients Checker";
 			sourceTree = "<group>";
@@ -127,6 +130,10 @@
 		850FEFD2288D607D003528C9 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				85B99C8628C4BE7600A95E25 /* Coordinators */,
+				855DDBB828A4C078008B54D7 /* Helpers */,
+				850FEFD1288D601F003528C9 /* Supporting Files */,
+				850FEFE4288DC52A003528C9 /* Extensions */,
 				850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */,
 				850FEFBD288D5F37003528C9 /* AppDelegate.swift */,
 			);
@@ -147,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				850FEFC1288D5F37003528C9 /* ClientListViewController.swift */,
+				855DDBBB28A60704008B54D7 /* ClientListTableViewDataSource.swift */,
+				855DDBBD28A60999008B54D7 /* ClientListTableViewDelegate.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -156,7 +165,6 @@
 			children = (
 				850FEFD6288D6396003528C9 /* ClientListView.swift */,
 				850FEFD8288D6596003528C9 /* ClientCell.swift */,
-				856839832892FE3300BDC5E5 /* ClientListViewDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,7 +191,7 @@
 		850FEFDF288D903C003528C9 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8568399B2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift */,
+				8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */,
 				850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */,
 			);
 			path = "View Controller";
@@ -241,6 +249,15 @@
 				8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		85B99C8628C4BE7600A95E25 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				85B99C8728C4BE8E00A95E25 /* Coordinator.swift */,
+				85B99C8928C4BEDE00A95E25 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		B0ACB2F7068CEDEEBDF58DFC /* Frameworks */ = {
@@ -365,21 +382,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				856839842892FE3300BDC5E5 /* ClientListViewDelegate.swift in Sources */,
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
 				8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */,
 				855DDBBA28A4C08B008B54D7 /* Box.swift in Sources */,
 				850FEFD9288D6596003528C9 /* ClientCell.swift in Sources */,
 				8568398F2895609C00BDC5E5 /* ClientDetailsViewModel.swift in Sources */,
-				8568399C2896AD9B00BDC5E5 /* ClientLDetailsViewControllerDelegate.swift in Sources */,
+				855DDBBC28A60704008B54D7 /* ClientListTableViewDataSource.swift in Sources */,
+				8568399C2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift in Sources */,
 				85683994289682EE00BDC5E5 /* IClientListViewModel.swift in Sources */,
 				8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */,
 				8568399A28968A7800BDC5E5 /* ClientCellViewModel.swift in Sources */,
 				850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */,
+				85B99C8A28C4BEDE00A95E25 /* AppCoordinator.swift in Sources */,
 				8568399E2897918600BDC5E5 /* ClientDetailsViewDelegate.swift in Sources */,
+				855DDBBE28A60999008B54D7 /* ClientListTableViewDelegate.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
 				856839982896894300BDC5E5 /* IClientCellViewModel.swift in Sources */,
 				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
+				85B99C8828C4BE8E00A95E25 /* Coordinator.swift in Sources */,
 				856839962896833700BDC5E5 /* ClientListViewModel.swift in Sources */,
 				850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */,
 				850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */,
@@ -526,7 +546,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94XUBZ99A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Clients Checker/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Clients Checker/Application/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -556,7 +576,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94XUBZ99A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Clients Checker/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Clients Checker/Application/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

@@ -14,8 +14,4 @@ protocol IClientListViewModel {
     func numberOfRowsInSection() -> Int
     func getClientCellViewModel(at indexPath: IndexPath) -> IClientCellViewModel
     func getClientDetailsViewModel(at indexPath: IndexPath?) -> IClientDetailsViewModel
-    func getClientDetailsNavigationController(
-        withDelegate delegate: ClientListViewController,
-        andViewModel viewModel: IClientDetailsViewModel
-    ) -> UINavigationController
 }

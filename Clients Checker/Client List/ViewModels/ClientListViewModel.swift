@@ -37,18 +37,4 @@ class ClientListViewModel: IClientListViewModel {
             return ClientDetailsViewModel(client: nil)
         }
     }
-    
-    func getClientDetailsNavigationController(
-        withDelegate delegate: ClientListViewController,
-        andViewModel viewModel: IClientDetailsViewModel
-    ) -> UINavigationController {
-        let clientDetailsViewController = ClientDetailsViewController()
-        let navigationController = UINavigationController(rootViewController: clientDetailsViewController)
-        
-        navigationController.modalPresentationStyle = .fullScreen
-        clientDetailsViewController.delegate = delegate
-        clientDetailsViewController.viewModel = viewModel
-        
-        return navigationController
-    }
 }

@@ -7,16 +7,18 @@
 
 import UIKit
 
-class ClientDetailsViewController: UIViewController {
+final class ClientDetailsViewController: UIViewController {
     
     // MARK: - Public Properties
     
-    weak var delegate: ClientLDetailsViewControllerDelegate!
-    var viewModel: IClientDetailsViewModel! {
+    weak var delegate: ClientDetailsViewControllerDelegate!
+    weak var coordinator: Coordinator!
+    var clientDetailsViewModel: IClientDetailsViewModel! {
         didSet {
-            title = viewModel.title
+            title = clientDetailsViewModel.title
         }
     }
+    
     var mainView: ClientDetailsView? {
         view as? ClientDetailsView
     }
@@ -63,11 +65,11 @@ extension ClientDetailsViewController: ClientDetailsViewDelegate {
     }
     
     @objc func saveBarButtonTapped() {
-        viewModel.clientName = mainView?.nameTextField.text
-        viewModel.location = mainView?.locationTextField.text
-        viewModel.date = mainView?.datePicker.date
+        clientDetailsViewModel.clientName = mainView?.nameTextField.text
+        clientDetailsViewModel.location = mainView?.locationTextField.text
+        clientDetailsViewModel.date = mainView?.datePicker.date
         
-        viewModel.saveClient { [weak self] in
+        clientDetailsViewModel.saveClient { [weak self] in
             self?.delegate.reloadData()
         }
         

@@ -9,12 +9,13 @@ final class Box<T> {
     
     typealias Listener = (T) -> Void
     
-    var listener: Listener?
     var value: T {
         didSet {
             listener?(value)
         }
     }
+    
+    private var listener: Listener?
     
     init(_ value: T) {
         self.value = value

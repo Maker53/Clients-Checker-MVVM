@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ClientListViewController: UIViewController {
+final class ClientListViewController: UIViewController {
     
     // MARK: - Public Properties
     
@@ -15,15 +15,19 @@ class ClientListViewController: UIViewController {
         view as? ClientListView
     }
     
-    // MARK: - Private Properties
-    
-    private var clientListViewModel: IClientListViewModel! {
+    weak var coordinator: Coordinator!
+    var clientListViewModel: IClientListViewModel! {
         didSet {
             clientListViewModel.fetchClients { [unowned self] in
                 self.mainView?.tableView.reloadData()
             }
         }
     }
+    
+    // MARK: - Private Properties
+    
+    private lazy var clientListTableViewDataSource = ClientListTableViewDataSource(viewModel: clientListViewModel)
+    private lazy var clientListTableViewDelegate = ClientListTableViewDelegate(viewModel: clientListViewModel, coordinator: coordinator)
     
     // MARK: - Override Methods
     
@@ -33,49 +37,19 @@ class ClientListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mainView?.tableView.dataSource = self
-        mainView?.tableView.delegate = self
+                
+        mainView?.tableView.dataSource = clientListTableViewDataSource
+        mainView?.tableView.delegate = clientListTableViewDelegate
         mainView?.delegate = self
-        
-        clientListViewModel = ClientListViewModel()
     }
 }
 
-extension ClientListViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        clientListViewModel.numberOfSections()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        clientListViewModel.numberOfRowsInSection()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: ClientCell.identifier,
-            for: indexPath
-        ) as? ClientCell else { return UITableViewCell() }
-        
-        cell.clientCellViewModel = clientListViewModel.getClientCellViewModel(at: indexPath)
-        cell.configure()
-        
-        return cell
-    }
-}
+// MARK: - ClientDetailsViewControllerDelegate
 
-extension ClientListViewController: UITableViewDelegate {
+extension ClientListViewController: ClientDetailsViewControllerDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        let clientDetailsViewModel = clientListViewModel.getClientDetailsViewModel(at: indexPath)
-        let navigationController = clientListViewModel.getClientDetailsNavigationController(
-            withDelegate: self,
-            andViewModel: clientDetailsViewModel)
-        
-        present(navigationController, animated: true)
+    func reloadData() {
+        mainView?.tableView.reloadData()
     }
 }
 
@@ -83,19 +57,9 @@ extension ClientListViewController: UITableViewDelegate {
 
 extension ClientListViewController: ClientListViewDelegate {
     
-    func addNewClientButtonPressed() {
-        let clientDetailsViewModel = clientListViewModel.getClientDetailsViewModel(at: nil)
-        let navigationController = clientListViewModel.getClientDetailsNavigationController(
-            withDelegate: self,
-            andViewModel: clientDetailsViewModel)
+    func showClientDetails(at indexPath: IndexPath?) {
+        let viewModel = clientListViewModel.getClientDetailsViewModel(at: indexPath)
         
-        present(navigationController, animated: true)
-    }
-}
-
-extension ClientListViewController: ClientLDetailsViewControllerDelegate {
-    
-    func reloadData() {
-        mainView?.tableView.reloadData()
+        coordinator.eventOccurred(.showClientDetails(with: viewModel))
     }
 }

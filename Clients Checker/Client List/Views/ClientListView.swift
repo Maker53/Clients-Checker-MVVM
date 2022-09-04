@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ClientListViewDelegate: AnyObject {
+    
+    func showClientDetails(at indexPath: IndexPath?)
+}
+
 class ClientListView: UIView {
     
     // MARK: - Public UI Properties
@@ -35,8 +40,6 @@ class ClientListView: UIView {
         
         return button
     }()
-    
-    // MARK: - Delegate
     
     weak var delegate: ClientListViewDelegate!
     
@@ -82,6 +85,6 @@ extension ClientListView {
     // MARK: - Private Target-Actions
     
     @objc private func addNewClientButtonPressed() {
-        delegate.addNewClientButtonPressed()
+        delegate.showClientDetails(at: nil)
     }
 }
