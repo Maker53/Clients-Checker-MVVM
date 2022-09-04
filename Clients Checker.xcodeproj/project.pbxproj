@@ -7,19 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E309AC6EFDA5A947A9641EF /* Pods_Clients_Checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E99F37AA935A0998B197CC /* Pods_Clients_Checker.framework */; };
 		850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFBD288D5F37003528C9 /* AppDelegate.swift */; };
 		850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFC1288D5F37003528C9 /* ClientListViewController.swift */; };
 		850FEFC7288D5F38003528C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC6288D5F38003528C9 /* Assets.xcassets */; };
 		850FEFCA288D5F38003528C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */; };
+		850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD6288D6396003528C9 /* ClientListView.swift */; };
+		850FEFD9288D6596003528C9 /* ClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFD8288D6596003528C9 /* ClientCell.swift */; };
+		850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */; };
+		850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE2288D907C003528C9 /* ClientDetailsView.swift */; };
+		850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */; };
+		855DDBBA28A4C08B008B54D7 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DDBB928A4C08B008B54D7 /* Box.swift */; };
+		855DDBBC28A60704008B54D7 /* ClientListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DDBBB28A60704008B54D7 /* ClientListTableViewDataSource.swift */; };
+		855DDBBE28A60999008B54D7 /* ClientListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855DDBBD28A60999008B54D7 /* ClientListTableViewDelegate.swift */; };
+		85683987289302C400BDC5E5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683986289302C400BDC5E5 /* Client.swift */; };
+		8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839892893030C00BDC5E5 /* IStorageManager.swift */; };
+		8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568398B2893035500BDC5E5 /* StorageManager.swift */; };
+		8568398F2895609C00BDC5E5 /* ClientDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568398E2895609C00BDC5E5 /* ClientDetailsViewModel.swift */; };
+		85683991289560AF00BDC5E5 /* IClientDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683990289560AF00BDC5E5 /* IClientDetailsViewModel.swift */; };
+		85683994289682EE00BDC5E5 /* IClientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683993289682EE00BDC5E5 /* IClientListViewModel.swift */; };
+		856839962896833700BDC5E5 /* ClientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839952896833700BDC5E5 /* ClientListViewModel.swift */; };
+		856839982896894300BDC5E5 /* IClientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856839972896894300BDC5E5 /* IClientCellViewModel.swift */; };
+		8568399A28968A7800BDC5E5 /* ClientCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */; };
+		8568399C2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */; };
+		8568399E2897918600BDC5E5 /* ClientDetailsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568399D2897918600BDC5E5 /* ClientDetailsViewDelegate.swift */; };
+		85B99C8828C4BE8E00A95E25 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B99C8728C4BE8E00A95E25 /* Coordinator.swift */; };
+		85B99C8A28C4BEDE00A95E25 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B99C8928C4BEDE00A95E25 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F8B1A75A8F350C1E736D11B /* Pods-Clients Checker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clients Checker.release.xcconfig"; path = "Target Support Files/Pods-Clients Checker/Pods-Clients Checker.release.xcconfig"; sourceTree = "<group>"; };
+		672A7D974380A4A3AB273D18 /* Pods-Clients Checker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clients Checker.debug.xcconfig"; path = "Target Support Files/Pods-Clients Checker/Pods-Clients Checker.debug.xcconfig"; sourceTree = "<group>"; };
+		77E99F37AA935A0998B197CC /* Pods_Clients_Checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clients_Checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		850FEFBA288D5F37003528C9 /* Clients Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clients Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850FEFBD288D5F37003528C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		850FEFC1288D5F37003528C9 /* ClientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewController.swift; sourceTree = "<group>"; };
 		850FEFC6288D5F38003528C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850FEFC9288D5F38003528C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		850FEFCB288D5F38003528C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		850FEFD6288D6396003528C9 /* ClientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListView.swift; sourceTree = "<group>"; };
+		850FEFD8288D6596003528C9 /* ClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCell.swift; sourceTree = "<group>"; };
+		850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewController.swift; sourceTree = "<group>"; };
+		850FEFE2288D907C003528C9 /* ClientDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsView.swift; sourceTree = "<group>"; };
+		850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInsets.swift"; sourceTree = "<group>"; };
+		855DDBB928A4C08B008B54D7 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		855DDBBB28A60704008B54D7 /* ClientListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListTableViewDataSource.swift; sourceTree = "<group>"; };
+		855DDBBD28A60999008B54D7 /* ClientListTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListTableViewDelegate.swift; sourceTree = "<group>"; };
+		85683986289302C400BDC5E5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		856839892893030C00BDC5E5 /* IStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IStorageManager.swift; sourceTree = "<group>"; };
+		8568398B2893035500BDC5E5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		8568398E2895609C00BDC5E5 /* ClientDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewModel.swift; sourceTree = "<group>"; };
+		85683990289560AF00BDC5E5 /* IClientDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClientDetailsViewModel.swift; sourceTree = "<group>"; };
+		85683993289682EE00BDC5E5 /* IClientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClientListViewModel.swift; sourceTree = "<group>"; };
+		856839952896833700BDC5E5 /* ClientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewModel.swift; sourceTree = "<group>"; };
+		856839972896894300BDC5E5 /* IClientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IClientCellViewModel.swift; sourceTree = "<group>"; };
+		8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCellViewModel.swift; sourceTree = "<group>"; };
+		8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		8568399D2897918600BDC5E5 /* ClientDetailsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailsViewDelegate.swift; sourceTree = "<group>"; };
+		85B99C8728C4BE8E00A95E25 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		85B99C8928C4BEDE00A95E25 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +73,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E309AC6EFDA5A947A9641EF /* Pods_Clients_Checker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B1BDB93F7AE42C782DFA1FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				672A7D974380A4A3AB273D18 /* Pods-Clients Checker.debug.xcconfig */,
+				5F8B1A75A8F350C1E736D11B /* Pods-Clients Checker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		850FEFB1288D5F37003528C9 = {
 			isa = PBXGroup;
 			children = (
 				850FEFBC288D5F37003528C9 /* Clients Checker */,
 				850FEFBB288D5F37003528C9 /* Products */,
+				3B1BDB93F7AE42C782DFA1FC /* Pods */,
+				B0ACB2F7068CEDEEBDF58DFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +110,10 @@
 		850FEFBC288D5F37003528C9 /* Clients Checker */ = {
 			isa = PBXGroup;
 			children = (
-				850FEFD3288D609C003528C9 /* Client List */,
 				850FEFD2288D607D003528C9 /* Application */,
-				850FEFD1288D601F003528C9 /* Supporting Files */,
+				85683985289302AF00BDC5E5 /* Model */,
+				850FEFD3288D609C003528C9 /* Client List */,
+				850FEFDD288D902A003528C9 /* ClientDetails */,
 			);
 			path = "Clients Checker";
 			sourceTree = "<group>";
@@ -71,6 +130,10 @@
 		850FEFD2288D607D003528C9 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				85B99C8628C4BE7600A95E25 /* Coordinators */,
+				855DDBB828A4C078008B54D7 /* Helpers */,
+				850FEFD1288D601F003528C9 /* Supporting Files */,
+				850FEFE4288DC52A003528C9 /* Extensions */,
 				850FEFC8288D5F38003528C9 /* LaunchScreen.storyboard */,
 				850FEFBD288D5F37003528C9 /* AppDelegate.swift */,
 			);
@@ -80,6 +143,8 @@
 		850FEFD3288D609C003528C9 /* Client List */ = {
 			isa = PBXGroup;
 			children = (
+				85683992289682D300BDC5E5 /* ViewModels */,
+				850FEFD5288D6383003528C9 /* Views */,
 				850FEFD4288D60AA003528C9 /* View Controller */,
 			);
 			path = "Client List";
@@ -89,8 +154,118 @@
 			isa = PBXGroup;
 			children = (
 				850FEFC1288D5F37003528C9 /* ClientListViewController.swift */,
+				855DDBBB28A60704008B54D7 /* ClientListTableViewDataSource.swift */,
+				855DDBBD28A60999008B54D7 /* ClientListTableViewDelegate.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		850FEFD5288D6383003528C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFD6288D6396003528C9 /* ClientListView.swift */,
+				850FEFD8288D6596003528C9 /* ClientCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		850FEFDD288D902A003528C9 /* ClientDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8568398D2895608800BDC5E5 /* ViewModel */,
+				850FEFDF288D903C003528C9 /* View Controller */,
+				850FEFDE288D9038003528C9 /* Views */,
+			);
+			path = ClientDetails;
+			sourceTree = "<group>";
+		};
+		850FEFDE288D9038003528C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8568399D2897918600BDC5E5 /* ClientDetailsViewDelegate.swift */,
+				850FEFE2288D907C003528C9 /* ClientDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		850FEFDF288D903C003528C9 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8568399B2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift */,
+				850FEFE0288D9052003528C9 /* ClientDetailsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		850FEFE4288DC52A003528C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				850FEFE5288DC55F003528C9 /* UITextField+TextInsets.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		855DDBB828A4C078008B54D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				855DDBB928A4C08B008B54D7 /* Box.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		85683985289302AF00BDC5E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85683988289302FA00BDC5E5 /* Services */,
+				85683986289302C400BDC5E5 /* Client.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		85683988289302FA00BDC5E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				856839892893030C00BDC5E5 /* IStorageManager.swift */,
+				8568398B2893035500BDC5E5 /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8568398D2895608800BDC5E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8568398E2895609C00BDC5E5 /* ClientDetailsViewModel.swift */,
+				85683990289560AF00BDC5E5 /* IClientDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		85683992289682D300BDC5E5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				85683993289682EE00BDC5E5 /* IClientListViewModel.swift */,
+				856839952896833700BDC5E5 /* ClientListViewModel.swift */,
+				856839972896894300BDC5E5 /* IClientCellViewModel.swift */,
+				8568399928968A7800BDC5E5 /* ClientCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		85B99C8628C4BE7600A95E25 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				85B99C8728C4BE8E00A95E25 /* Coordinator.swift */,
+				85B99C8928C4BEDE00A95E25 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B0ACB2F7068CEDEEBDF58DFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77E99F37AA935A0998B197CC /* Pods_Clients_Checker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 850FEFCE288D5F38003528C9 /* Build configuration list for PBXNativeTarget "Clients Checker" */;
 			buildPhases = (
+				D64AFE6BF382810BA9A5F45B /* [CP] Check Pods Manifest.lock */,
 				850FEFB6288D5F37003528C9 /* Sources */,
 				850FEFB7288D5F37003528C9 /* Frameworks */,
 				850FEFB8288D5F37003528C9 /* Resources */,
+				3ED81D9FFD6679A1A3733029 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,13 +335,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3ED81D9FFD6679A1A3733029 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clients Checker/Pods-Clients Checker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clients Checker/Pods-Clients Checker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clients Checker/Pods-Clients Checker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D64AFE6BF382810BA9A5F45B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clients Checker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		850FEFB6288D5F37003528C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				850FEFC2288D5F37003528C9 /* ClientListViewController.swift in Sources */,
+				8568398C2893035500BDC5E5 /* StorageManager.swift in Sources */,
+				855DDBBA28A4C08B008B54D7 /* Box.swift in Sources */,
+				850FEFD9288D6596003528C9 /* ClientCell.swift in Sources */,
+				8568398F2895609C00BDC5E5 /* ClientDetailsViewModel.swift in Sources */,
+				855DDBBC28A60704008B54D7 /* ClientListTableViewDataSource.swift in Sources */,
+				8568399C2896AD9B00BDC5E5 /* ClientDetailsViewControllerDelegate.swift in Sources */,
+				85683994289682EE00BDC5E5 /* IClientListViewModel.swift in Sources */,
+				8568398A2893030C00BDC5E5 /* IStorageManager.swift in Sources */,
+				8568399A28968A7800BDC5E5 /* ClientCellViewModel.swift in Sources */,
+				850FEFE3288D907C003528C9 /* ClientDetailsView.swift in Sources */,
+				85B99C8A28C4BEDE00A95E25 /* AppCoordinator.swift in Sources */,
+				8568399E2897918600BDC5E5 /* ClientDetailsViewDelegate.swift in Sources */,
+				855DDBBE28A60999008B54D7 /* ClientListTableViewDelegate.swift in Sources */,
 				850FEFBE288D5F37003528C9 /* AppDelegate.swift in Sources */,
+				856839982896894300BDC5E5 /* IClientCellViewModel.swift in Sources */,
+				850FEFD7288D6396003528C9 /* ClientListView.swift in Sources */,
+				85B99C8828C4BE8E00A95E25 /* Coordinator.swift in Sources */,
+				856839962896833700BDC5E5 /* ClientListViewModel.swift in Sources */,
+				850FEFE6288DC55F003528C9 /* UITextField+TextInsets.swift in Sources */,
+				850FEFE1288D9052003528C9 /* ClientDetailsViewController.swift in Sources */,
+				85683991289560AF00BDC5E5 /* IClientDetailsViewModel.swift in Sources */,
+				85683987289302C400BDC5E5 /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +538,7 @@
 		};
 		850FEFCF288D5F38003528C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 672A7D974380A4A3AB273D18 /* Pods-Clients Checker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,7 +546,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94XUBZ99A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Clients Checker/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Clients Checker/Application/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -327,6 +568,7 @@
 		};
 		850FEFD0288D5F38003528C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F8B1A75A8F350C1E736D11B /* Pods-Clients Checker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,7 +576,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94XUBZ99A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Clients Checker/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Clients Checker/Application/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
