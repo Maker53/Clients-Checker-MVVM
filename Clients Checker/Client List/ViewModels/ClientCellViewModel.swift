@@ -53,6 +53,6 @@ class ClientCellViewModel: IClientCellViewModel {
     
     func checkMarkPressed() {
         isDone.value.toggle()
-        StorageManager.shared.updateObject { client.isDone = isDone.value }
+        StorageManager.shared.updateObject { self.client.isDone = self.isDone.value }
     }
 }

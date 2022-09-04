@@ -18,9 +18,7 @@ final class ClientListViewController: UIViewController {
     weak var coordinator: Coordinator!
     var clientListViewModel: IClientListViewModel! {
         didSet {
-            clientListViewModel.fetchClients { [unowned self] in
-                self.mainView?.tableView.reloadData()
-            }
+            clientListViewModel.fetchClients()
         }
     }
     

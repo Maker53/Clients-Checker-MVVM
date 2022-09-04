@@ -15,7 +15,6 @@ final class AppCoordinator: Coordinator {
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.navigationController.modalPresentationStyle = .fullScreen
     }
     
     func start() {

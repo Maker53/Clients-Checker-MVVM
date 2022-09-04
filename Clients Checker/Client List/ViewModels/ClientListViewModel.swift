@@ -11,10 +11,9 @@ class ClientListViewModel: IClientListViewModel {
     
     private var clients: Results<Client>!
     
-    func fetchClients(completion: @escaping () -> Void) {
+    func fetchClients() {
         StorageManager.shared.fetchObjects(Client.self) { [unowned self] clients in
             self.clients = clients
-            completion()
         }
     }
     

@@ -40,26 +40,20 @@ final class ClientDetailsViewModel: IClientDetailsViewModel {
             let location = location,
             let date = date
         else { return }
-        
-        // TODO: Вынести в отдельный сервис?
-        
+                
         if let client = currentClient {
-            DispatchQueue.main.async {
-                StorageManager.shared.updateObject {
-                    client.clientName = clientName
-                    client.location = location
-                    client.visitDate = date
-                    
-                    completion()
-                }
+            StorageManager.shared.updateObject {
+                client.clientName = clientName
+                client.location = location
+                client.visitDate = date
+                
+                completion()
             }
         } else {
             let newClient = Client(clientName: clientName, location: location, visitDate: date)
             
-            DispatchQueue.main.async {
-                StorageManager.shared.saveObject(newClient) {
-                    completion()
-                }
+            StorageManager.shared.saveObject(newClient) {
+                completion()
             }
         }
     }

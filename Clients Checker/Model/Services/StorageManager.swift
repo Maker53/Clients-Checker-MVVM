@@ -22,16 +22,20 @@ class StorageManager: IStorageManager {
         completion(objects)
     }
     
-    func saveObject(_ object: Client, completion: () -> Void) {
-        try! realm.write {
-            realm.add(object)
-            completion()
+    func saveObject(_ object: Client, completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            try! realm.write {
+                realm.add(object)
+                completion()
+            }
         }
     }
     
-    func updateObject(_ block: () -> Void) {
-        try! realm.write {
-            block()
+    func updateObject(_ block: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            try! realm.write {
+                block()
+            }
         }
     }
 }

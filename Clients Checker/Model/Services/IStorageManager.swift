@@ -12,6 +12,6 @@ protocol IStorageManager {
     static var shared: IStorageManager { get }
     
     func fetchObjects(_ type: Client.Type, completion: (Results<Client>) -> Void)
-    func saveObject(_ object: Client, completion: () -> Void)
-    func updateObject(_ block: () -> Void)
+    func saveObject(_ object: Client, completion: @escaping () -> Void)
+    func updateObject(_ block: @escaping () -> Void)
 }

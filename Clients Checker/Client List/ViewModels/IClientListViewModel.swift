@@ -9,7 +9,7 @@ import RealmSwift
 
 protocol IClientListViewModel {
     
-    func fetchClients(completion: @escaping () -> Void)
+    func fetchClients()
     func numberOfSections() -> Int
     func numberOfRowsInSection() -> Int
     func getClientCellViewModel(at indexPath: IndexPath) -> IClientCellViewModel
